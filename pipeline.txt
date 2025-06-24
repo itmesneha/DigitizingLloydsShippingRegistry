@@ -1,0 +1,70 @@
+1. Download lloyd's whole shipping registry from - 
+https://ia802809.us.archive.org/5/items/HECROS1860/ROS1860.pdf
+
+2. Run extract_single_page.py. It requires human input, enter the page number (0-indexed so subtract 1 eg. for page 155 enter 154)
+This will give you 2 outputs, the page in pdf form then png form.
+
+3. Get_coordinates to get the exact width of each column. Uses opencv and tracks mouse clicks.
+Coordinates - 
+
+Odd Page numbers (eg 155) - 
+Clicked at: (75, 1417)
+Clicked at: (306, 1406)
+Clicked at: (477, 1403)
+Clicked at: (547, 1540)
+Clicked at: (668, 1524)
+Clicked at: (759, 1538)
+Clicked at: (929, 1549)
+Clicked at: (1068, 1549)
+Clicked at: (1269, 1538)
+Clicked at: (1334, 1543)
+Clicked at: (1408, 1543)
+Clicked at: (1485, 1544)
+
+COLUMN_BOUNDARIES = [
+    (0, 75),   
+    (75, 306),
+    (306, 477),
+    (477, 547),
+    (547, 668),
+    (668, 759),
+    (759, 929),
+    (929, 1068),
+    (1068, 1269),
+    (1269, 1334),
+    (1334, 1408),
+    (1408, 1485)
+]
+
+
+Even Page numbers (eg 156) - 
+Clicked at: (121, 1693)
+Clicked at: (361, 1704)
+Clicked at: (530, 1703)
+Clicked at: (607, 1702)
+Clicked at: (726, 1700)
+Clicked at: (815, 1699)
+Clicked at: (986, 1698)
+Clicked at: (1121, 1711)
+Clicked at: (1325, 1725)
+Clicked at: (1389, 1728)
+Clicked at: (1465, 1734)
+Clicked at: (1514, 2034)
+
+COLUMN_BOUNDARIES = [
+    (0, 121),
+    (121, 361),
+    (361, 530),
+    (530, 607),
+    (607, 726),
+    (726, 815),
+    (815, 986),
+    (986, 1121),
+    (1121, 1325),
+    (1325, 1389),
+    (1389, 1465),
+    (1465, 1514)
+]
+
+4. Run the notebook 
+https://colab.research.google.com/drive/1r-F4aXKY5GWt8smoCE1rQVPyS_ySwb-n#scrollTo=jZcq7MmUgTLt
